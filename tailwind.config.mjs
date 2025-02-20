@@ -8,8 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        default: "#FFFFFF",
+        dark: "#333333",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        prompt: ["var(--prompt)"],
+        sulphur_Point: ["var(--sulphur_Point)"],
+        sans: ["Sarabun", "sans-serif"],
       },
     },
   },

@@ -1,101 +1,192 @@
+import React from "react";
 import Image from "next/image";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+      <div className="flex flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+        <div className="flex items-center justify-start w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-lg font-[600]">
+          Ladawan By Channakor
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex items-center justify-end w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-lg font-[600]">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+            src="/images/icons/icons-1.png"
+            width={20}
+            height={100}
+            alt="icons-1.png"
+            priority={true}
+            className=""
+          />{" "}
+          Contact : 089 699 5678
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+        <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-end w-full h-full p-2 gap-2 border-2 border-dark border-dashed border-b-2 border-dark text-lg font-[600]">
+            บ้านเดี่ยวหรู ในหมู่บ้าน ลดาวัลย์ ซอยงามวงศ์วาน 47 แยก 39 ใกล้
+            มหาวิทยาลัย ธุรกิจบัณฑิตย์
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+        <div className="flex items-center justify-start w-10/12 h-full p-2 gap-2 border-2 border-dark border-dashed">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/images/exterior/exterior-1.jpg"
+            width={980}
+            height={100}
+            alt="exterior-1.jpg"
+            priority={true}
+            className=""
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-start w-full h-full p-2 gap-2 border-2 border-dark border-dashed border-b-2 border-dark text-lg font-[600]">
+              บ้านเดี่ยวหรู ในหมู่บ้าน ลดาวัลย์ ซอยงามวงศ์วาน 47 แยก 39 ใกล้
+              มหาวิทยาลัย ธุรกิจบัณฑิตย์
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-9/12 h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+              3 ห้องนอน
+            </div>
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+              5 ห้องน้ำ
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-center justify-center w-9/12  h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            1 ห้องนอนแม่บ้าน
+          </div>
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            1 ห้องน้ำแม่บ้านครับ
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed border-b-2 border-dark text-lg font-[600]">
+              พื้นที่ใช้สอยภายในบ้าน 324 ตร.ม.
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-center justify-center w-9/12  h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            แบ่งเป็นชั้น 1 199 ตร.ม.
+          </div>
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            ชั้น 2 125 ตร.ม.
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed border-b-2 border-dark text-lg font-[600]">
+              พื้นที่ใช้สอยภายนอก 203 ตร.ม.
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-center justify-center w-9/12  h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            ระเบียงด้านหลัง 11 ตร.ม.
+          </div>
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            ลานซักล้างข้างบ้าน 37 ตร.ม.
+          </div>
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            ระเบียงข้างบ้าน โรงจอดรถและถนนภายใน 155 ตร.ม
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-start justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+        <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-lg font-[600]">
+              ภายนอก
+            </div>
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <Image
+              src="/images/exterior/exterior-2.jpg"
+              width={500}
+              height={100}
+              alt="exterior-2.jpg"
+              priority={true}
+              className=""
+            />
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-start justify- w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <Image
+              src="/images/interior/interior-2.jpg"
+              width={500}
+              height={100}
+              alt="interior-2.jpg"
+              priority={true}
+              className=""
+            />
+          </div>
+          <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-lg font-[600]">
+              ภายใน
+            </div>
+            <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-sm">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-end w-10/12 h-full p-2 gap-2 border-2 border-dark border-dashed">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/images/exterior/exterior-3.jpg"
+            width={980}
+            height={100}
+            alt="exterior-3.jpg"
+            priority={true}
+            className=""
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+        <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <div className="flex items-center justify-start w-full h-full p-2 gap-2 border-2 border-dark border-dashed text-lg font-[600]">
+              Google Map
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.568765481971!2d100.553008!3d13.8671443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29d89b6f6da29%3A0x908e1b1589d38a1a!2z4Lia4Lij4Li04Lip4Lix4LiH4Liy4LiZ4LmB4LilIOC4quC5ieC4i-C4o-C4sOC4iuC5gOC4reC5hOC5guC5geC4nuC4o-C4sOC4lOC5hOC4muC4l-C5jOC4iuC4seC4meC5jA!5e0!3m2!1sth!2sth!4v1708390741223"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
