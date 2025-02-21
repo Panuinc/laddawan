@@ -16,7 +16,7 @@ const sulphur_Point = Sulphur_Point({
 });
 
 export const metadata = {
-  title: "Ladawan  By Channakor",
+  title: "Channakorn Engineer",
   description: "Home Sale",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${sulphur_Point.variable} ${prompt.variable} antialiased`}
       >
-        <div className="flex items-start justify-center w-full min-h-screen gap-2 text-dark font-prompt">
+        <div className="flex items-start justify-center w-full min-h-screen gap-2 border-2 border-dark border-dashed text-dark font-prompt">
           {children}
         </div>
       </body>
