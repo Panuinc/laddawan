@@ -3,12 +3,7 @@ import React from "react";
 import { BathRoom, BedRoom, Home, Phone } from "@/components/icons";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -21,6 +16,10 @@ const galleryImages = [
   { src: "/images/exterior/exterior-3.jpg", alt: "exterior-3" },
   { src: "/images/interior/interior-1.jpg", alt: "interior-1" },
   { src: "/images/interior/interior-2.jpg", alt: "interior-2" },
+  { src: "/images/interior/interior-3.jpg", alt: "interior-3" },
+  { src: "/images/interior/interior-4.jpg", alt: "interior-4" },
+  { src: "/images/interior/interior-5.jpg", alt: "interior-5" },
+
 ];
 
 export default function page() {
@@ -337,16 +336,16 @@ export default function page() {
         <div className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
           Gallery
         </div>
-        <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
+        <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-red-500 border-dashed">
           <Swiper
             modules={[Autoplay, EffectCoverflow]}
             effect="coverflow"
             grabCursor
             centeredSlides
             slidesPerView={3}
-            coverflowEffect={{ rotate: 45, depth: 100, slideShadows: true }}
+            coverflowEffect={{ rotate: 0, depth: 100, slideShadows: true }}
             autoplay={{ delay: 5000 }}
-            className="w-full h-full p-2 border-2 border-dark border-dashed"
+            className="flex items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed overflow-auto"
           >
             {galleryImages.map((image, index) => (
               <SwiperSlide key={index}>
@@ -361,7 +360,6 @@ export default function page() {
               </SwiperSlide>
             ))}
           </Swiper>
-          ;
         </div>
       </div>
       <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2 border-2 border-dark border-dashed">
