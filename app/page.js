@@ -319,7 +319,7 @@ export default function page() {
             className="flex items-center justify-center w-full h-full p-4"
           >
             {galleryImages.map((image, index) => (
-              <SwiperSlide key={index} className="p-2">
+              <SwiperSlide key={index} className="">
                 <Image
                   src={image.src}
                   width={980}
