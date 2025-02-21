@@ -16,8 +16,8 @@ const sulphur_Point = Sulphur_Point({
 });
 
 export const metadata = {
-  title: "Channakorn Engineer",
-  description: "Home Sale",
+  title: "บ้านรีโนเวทพร้อมอยู่",
+  description: "บ้านลัดดาวัลย์รีโนเวทพร้อมอยู่",
 };
 
 export default function RootLayout({ children }) {
