@@ -60,7 +60,6 @@ const interior = [
   { src: "/images/interior/interior-5.jpg", alt: "interior-5" },
 ];
 
-
 export default function page() {
   const [activeSection, setActiveSection] = useState("highway");
   const [isClient, setIsClient] = useState(false);
@@ -85,6 +84,9 @@ export default function page() {
       </div>
       <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2">
         <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
+          <div className="flex items-center justify-center w-full h-full p-2 gap-2 text-3xl font-[600]">
+            ลัดดาวัลย์ ประชาชื่น
+          </div>
           <div className="flex items-center justify-center w-full h-full p-2 gap-2 text-2xl font-[600]">
             บ้านเดี่ยวสุดหรู ใจกลางเมือง พื้นที่สอยกว่า 324 ตร.ม
           </div>
