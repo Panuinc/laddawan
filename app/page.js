@@ -308,19 +308,25 @@ export default function page() {
             grabCursor
             centeredSlides
             slidesPerView={3}
-            coverflowEffect={{ rotate: 0, depth: 100, slideShadows: true }}
+            spaceBetween={20}
+            coverflowEffect={{
+              rotate: 0,
+              depth: 100,
+              slideShadows: true,
+              stretch: 0,
+            }}
             autoplay={{ delay: 5000 }}
-            className="flex items-center justify-center w-full h-full p-2 gap-2 overflow-auto"
+            className="flex items-center justify-center w-full h-full p-4"
           >
             {galleryImages.map((image, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="p-2">
                 <Image
                   src={image.src}
                   width={980}
                   height={100}
                   alt={image.alt}
                   priority
-                  className="w-96 h-full p-2 rounded-xl"
+                  className="w-full h-full rounded-xl"
                 />
               </SwiperSlide>
             ))}
