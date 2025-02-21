@@ -17,3 +17,19 @@
   border-radius: 50%;
   box-shadow: inset 4px 4px 8px #d1d9e6, inset -4px -4px 8px #ffffff;
 }
+
+.drop_shadow_black {
+  background: #333;
+  box-shadow: 4px 4px 8px #111, -4px -4px 8px #555;
+}
+
+.inner_shadow_black {
+  background: #333;
+  box-shadow: inset 4px 4px 8px #111, inset -4px -4px 8px #555;
+}
+
+.circular_black {
+  background: #333;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 8px #111, inset -4px -4px 8px #555;
+}
