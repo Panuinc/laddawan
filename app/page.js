@@ -39,6 +39,28 @@ const galleryImages = [
   // { src: "/images/interior/interior-5.jpg", alt: "interior-5" },
 ];
 
+const exterior = [
+  { src: "/images/exterior/exterior-1.jpg", alt: "exterior-1" },
+  { src: "/images/exterior/exterior-2.jpg", alt: "exterior-2" },
+  { src: "/images/exterior/exterior-3.jpg", alt: "exterior-3" },
+  // { src: "/images/interior/interior-1.jpg", alt: "interior-1" },
+  // { src: "/images/interior/interior-2.jpg", alt: "interior-2" },
+  // { src: "/images/interior/interior-3.jpg", alt: "interior-3" },
+  // { src: "/images/interior/interior-4.jpg", alt: "interior-4" },
+  // { src: "/images/interior/interior-5.jpg", alt: "interior-5" },
+];
+
+const interior = [
+  // { src: "/images/exterior/exterior-1.jpg", alt: "exterior-1" },
+  // { src: "/images/exterior/exterior-2.jpg", alt: "exterior-2" },
+  // { src: "/images/exterior/exterior-3.jpg", alt: "exterior-3" },
+  { src: "/images/interior/interior-2.jpg", alt: "interior-2" },
+  { src: "/images/interior/interior-3.jpg", alt: "interior-3" },
+  { src: "/images/interior/interior-4.jpg", alt: "interior-4" },
+  { src: "/images/interior/interior-5.jpg", alt: "interior-5" },
+];
+
+
 export default function page() {
   const [activeSection, setActiveSection] = useState("highway");
   const [isClient, setIsClient] = useState(false);
@@ -133,38 +155,80 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2">
+      <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
         <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
-          <div className="flex items-center justify-center w-full h-full p-2 gap-2 text-xl font-[600]">
+          <div className="flex items-center justify-start w-full h-full px-10 py-2 gap-2 border-b-2 border-dark text-xl font-[600]">
             Exterior
           </div>
         </div>
         <div className="flex items-center justify-center w-full h-full p-2 gap-2">
-          <Image
-            src="/images/exterior/exterior-1.jpg"
-            alt="exterior-1.jpg"
-            priority={true}
-            width={500}
-            height={500}
-            className="w-96 h-full p-2 rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[30px] rounded-br-[30px]"
-          />
+          <Swiper
+            modules={[Autoplay, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor
+            centeredSlides
+            slidesPerView={3}
+            spaceBetween={20}
+            coverflowEffect={{
+              rotate: 0,
+              depth: 100,
+              slideShadows: true,
+              stretch: 0,
+            }}
+            autoplay={{ delay: 5000 }}
+            className="flex items-center justify-center w-full h-full p-4"
+          >
+            {exterior.map((image, index) => (
+              <SwiperSlide key={index} className="">
+                <Image
+                  src={image.src}
+                  width={980}
+                  height={100}
+                  alt={image.alt}
+                  priority
+                  className="w-full h-full rounded-xl"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2">
-        <div className="flex items-center justify-center w-full h-full p-2 gap-2">
-          <Image
-            src="/images/interior/interior-3.jpg"
-            alt="interior-3.jpg"
-            priority={true}
-            width={500}
-            height={500}
-            className="w-96 h-full p-2 rounded-tl-[30px] rounded-bl-[30px] rounded-tr-[30px] rounded-br-[30px]"
-          />
-        </div>
+      <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
         <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
-          <div className="flex items-center justify-center w-full h-full p-2 gap-2 text-xl font-[600]">
+          <div className="flex items-center justify-end w-full h-full px-10 py-2 gap-2 border-b-2 border-dark text-xl font-[600]">
             Interior
           </div>
+        </div>
+        <div className="flex items-center justify-center w-full h-full p-2 gap-2">
+          <Swiper
+            modules={[Autoplay, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor
+            centeredSlides
+            slidesPerView={3}
+            spaceBetween={20}
+            coverflowEffect={{
+              rotate: 0,
+              depth: 100,
+              slideShadows: true,
+              stretch: 0,
+            }}
+            autoplay={{ delay: 5000 }}
+            className="flex items-center justify-center w-full h-full p-4"
+          >
+            {interior.map((image, index) => (
+              <SwiperSlide key={index} className="">
+                <Image
+                  src={image.src}
+                  width={980}
+                  height={100}
+                  alt={image.alt}
+                  priority
+                  className="w-full h-full rounded-xl"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2">
@@ -202,7 +266,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 border-l-2 border-dark">
+          <div className="flex flex-col items-center justify-center w-full h-full p-2 gap-2 xl:border-l-2 border-dark">
             <div className="flex flex-col xl:flex-row items-center justify-center w-full h-full p-2 gap-2">
               <div className="flex items-center justify-center w-full h-full p-2 gap-2 text-lg font-[600]">
                 พื้นที่ใช้สอยภายในบ้าน 324 ตร.ม.
